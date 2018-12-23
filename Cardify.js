@@ -26,22 +26,15 @@ const appendTarget =  (target, child) =>{
 	return Target.appendChild(child);
 }
 
+const basics = ['div','h','p','img','button','section','article'];
 //Now its time to populate our card object.
 
-//<div>
-Card.div = (classNames="", id="", text="") => {
-	return newElement('div', `${classNames}`, `${id}`, `${text}`);
-}
-
-//<button>
-Card.button = (classNames="", id="", text="") => {
-	return newElement('button', `${classNames}`, `${id}`, `${text}`);
-}
-
-//<p>
-Card.p = (classNames="", id="", text="") => {
-	return newElement('p', `${classNames}`, `${id}`, `${text}`);
-}
+basics.map(elem => {
+Card[elem] = (classNames="", id="", text="") => {
+	return newElement(`${elem}`, `${classNames}`, `${id}`, `${text}`);
+	}
+	return Card[elem];
+});
 
 
 //<small>
@@ -49,8 +42,15 @@ Card.small = (text="") => {
 	return newElement('small', ``, ``, `${text}`);
 }
 
-
-
+//<img>
+Card.img =(src,alt,width="auto",height="auto") => {
+	const img = newElement('img','image','','');
+	img.currentSrc = src;
+	img.alt = alt;
+	img.width = width;
+	img.height = height;
+	return img;
+}
 
 //<h1-6>
 Card.hNum = (headerNumber, classNames="", id="", text="") => {

@@ -1,4 +1,4 @@
-//Cardify v-1.0.0
+//Cardify v-1.0.1
 //Welcome one, Welcome all!
 //Open-Source***
 
@@ -6,11 +6,14 @@
 
 https://github.com/bnday01/Cardify.git
 
-//After creating your Card elements, append them to a Node in your document, like <body>.
+//After creating your Card elements, append them to a Node in your document, like <body>. 
+//I've pre-created your body const: myBody
+
+//To nest elements within eachother, chain .append functions
 
 //In leiu of personal time constraits, Cardify does not yet support all HTML tags
 
 Supported tags include:
 
-[<div>,<h1-6>,] 
+[<div>,<h1-6>,<p>,<small>,<img>,<button>,<section>,<article>] 
 
