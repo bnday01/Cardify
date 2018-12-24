@@ -58,9 +58,6 @@ Card.hNum = (headerNumber, classNames="", id="", text="") => {
 		console.log('Please choose a supported number for your header size.');
 		throw Error;
 	}
-	if (classNames == undefined && id == undefined && text == undefined){
-		return newElement(`h${headerNumber}`, "", "", "");
-	}
 	else{
 		return newElement(`h${headerNumber}`, `${classNames}`, `${id}`, `${text}`);
 	}
