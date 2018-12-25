@@ -26,12 +26,12 @@ const appendTarget =  (target, child) =>{
 	return Target.appendChild(child);
 }
 
-const basics = ['div','h','p','img','button','section','article','ul','li'];
+const basics = ['div','p','button','section','article','ul','li'];
 //Now its time to populate our card object.
 
 basics.map(elem => {
 Card[elem] = (classNames="", id="", text="") => {
-	return newElement(`${elem}`, `${classNames}`, `${id}`, `${text}`);
+	return newElement(elem, classNames, id, text);
 	}
 	return Card[elem];
 });
