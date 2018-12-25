@@ -1,4 +1,4 @@
-//Cardify v-1.0.2
+//Cardify v-1.0.3
 //Welcome one, Welcome all!
 //Open-Source***
 
@@ -16,4 +16,4 @@ In leiu of personal time constraits, Cardify does not yet support all HTML tags
 
 Supported tags include:
 
- [div,h1-6,p,small,img,button,section,article]
+ [div,h1-6,p,small,img,button,section,article,ul,li]

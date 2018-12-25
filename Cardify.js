@@ -26,7 +26,7 @@ const appendTarget =  (target, child) =>{
 	return Target.appendChild(child);
 }
 
-const basics = ['div','h','p','img','button','section','article'];
+const basics = ['div','h','p','img','button','section','article','ul','li'];
 //Now its time to populate our card object.
 
 basics.map(elem => {
@@ -53,7 +53,7 @@ Card.img =(src,alt,width="auto",height="auto") => {
 }
 
 //<h1-6>
-Card.hNum = (headerNumber, classNames="", id="", text="") => {
+Card.h = (headerNumber, classNames="", id="", text="") => {
 	if (headerNumber == undefined || headerNumber > 6){
 		console.log('Please choose a supported number for your header size.');
 		throw Error;
