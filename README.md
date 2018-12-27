@@ -8,7 +8,6 @@ https://github.com/bnday01/Cardify.git
 
 After creating your Card elements, append them to a Node in your document, like 
 "body".
-I've pre-created your body const: myBody
 
 To nest elements within eachother, chain .append functions
 

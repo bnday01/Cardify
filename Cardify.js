@@ -2,7 +2,6 @@
 //Were going to have to initiate a master card object:
 
 const Card = {};
-const myBody = document.querySelector('body');
 
 //First things first, we need a function to create HTML elements
 
@@ -43,12 +42,16 @@ Card.small = (text="") => {
 }
 
 //<img>
-Card.img =(src,alt,width="auto",height="auto") => {
-	const img = newElement('img','image','','');
-	img.currentSrc = src;
+Card.img =(src, alt="image", width, height) => {
+	const img = document.createElement('img');
+	if (typeof (width || height) == "string" ){
+		console.log('width/height must be integers, "px" not necessary');
+		throw Error;
+	}
+	img.src = src;
 	img.alt = alt;
-	img.width = width;
-	img.height = height;
+	(width) ? img.width = width : null;
+	(height) ? img.height = height: null;
 	return img;
 }
 
